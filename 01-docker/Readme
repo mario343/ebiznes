@@ -1,2 +1,42 @@
 docker pull mario343/ebiznes:threeplus
 https://hub.docker.com/repository/docker/mario343/ebiznes/tags/threeplus/sha256-8911bfadbe972f6b75eb0f04220a57a318b3ace3acc920490f6920947e3ced13
+
+1. we download necessary things
+   RUN apt-get update && apt-get install -y --no-install-recommends \
+    wget \
+    (https://techkamar.medium.com/how-to-deploy-specific-version-of-python-using-docker-96d387c16779 concerning below)
+   build-essential \
+    libssl-dev \
+    libffi-dev \
+    zlib1g-dev \
+    (here we end it, below zip/unzip for skdman)
+   zip \
+    unzip \
+    curl \
+    openjdk-8-jdk \
+    && rm -rf /var/lib/apt/lists/\*
+
+2. best way to download kotlin (recommended)
+   RUN curl -s "https://get.sdkman.io" | bash && \
+    bash -c "source $HOME/.sdkman/bin/sdkman-init.sh && sdk install kotlin"
+
+(to make system see it)  
+ENV PATH="/root/.sdkman/candidates/kotlin/current/bin:${PATH}"
+
+(https://techkamar.medium.com/how-to-deploy-specific-version-of-python-using-docker-96d387c16779 concerning below)
+RUN wget https://www.python.org/ftp/python/3.10.0/Python-3.10.0.tgz && \
+ tar -zxvf Python-3.10.0.tgz && \
+ cd Python-3.10.0 && \
+ ./configure --prefix=/opt/python3.10 && \
+ make && \
+ make install && \
+ rm -rf Python-3.10.0 Python-3.10.0.tgz
+
+3. overcomplicating life, simple bash script to make links -f to make it force
+   RUN for f in python python3; do \
+    ln -sf /opt/python3.10/bin/python3.10 /usr/bin/$f; \
+    done
+
+RUN python --version && \
+ java -version && \
+ kotlinc -version

@@ -22,11 +22,12 @@ RUN wget https://www.python.org/ftp/python/3.10.0/Python-3.10.0.tgz && \
     cd Python-3.10.0 && \
     ./configure --prefix=/opt/python3.10 && \
     make && \
-    make install
+    make install && \
+    rm -rf Python-3.10.0 Python-3.10.0.tgz
 
-RUN ln -sf /opt/python3.10/bin/python3.10 /usr/bin/python && \
-    ln -sf /opt/python3.10/bin/python3.10 /usr/bin/python3 && \
-    ln -sf /opt/python3.10/bin/pip3.10 /usr/bin/pip3
+RUN for f in python python3; do \
+    ln -sf /opt/python3.10/bin/python3.10 /usr/bin/$f; \
+    done
 
 RUN python --version && \
     java -version && \
