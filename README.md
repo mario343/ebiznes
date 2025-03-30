@@ -2,9 +2,9 @@
 
 **Zadanie 1** Docker
 
-:white_check_mark: 3.0 obraz ubuntu z Pythonem w wersji 3.10 [Link do commita](https://github.com/mario343/ebiznes/commit/e4d766b1cf8a579553eb1f126270540993167b71)
+:white_check_mark: 3.0 obraz ubuntu z Pythonem w wersji 3.10 [Link do commita](https://github.com/mario343/ebiznes/commit/d5b51fbea07a71e98ff9bd96fe3926fac1b49404)
 
-:white_check_mark: 3.5 obraz ubuntu:24.02 z Javą w wersji 8 oraz Kotlinem [Link do commita](https://github.com/mario343/ebiznes/commit/e4d766b1cf8a579553eb1f126270540993167b71)
+:white_check_mark: 3.5 obraz ubuntu:24.02 z Javą w wersji 8 oraz Kotlinem [Link do commita](https://github.com/mario343/ebiznes/commit/d5b51fbea07a71e98ff9bd96fe3926fac1b49404)
 
 🐳 [Obraz na DockerHub](https://hub.docker.com/r/mario343/ebiznes)
 
