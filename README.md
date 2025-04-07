@@ -57,7 +57,7 @@ Webex
 
 Kod: 03-kotlin
 
-[DEMO](https://github.com/mario343/ebiznes/blob/main/demos/zadanie2.gif)
+[DEMO](https://github.com/mario343/ebiznes/blob/main/demos/zadanie3.gif)
 
 **Zadanie 4** Go
 

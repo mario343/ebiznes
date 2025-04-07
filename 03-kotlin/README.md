@@ -1,39 +1,20 @@
-# ktor-sample
+**Zadanie 3** Kotlin
 
-This project was created using the [Ktor Project Generator](https://start.ktor.io).
+:white_check_mark: 3.0 Należy stworzyć aplikację kliencką w Kotlinie we frameworku Ktor,
+która pozwala na przesyłanie wiadomości na platformę Discord [Link do commita](https://github.com/mario343/ebiznes/commit/2775e4b00c2f2a8a1c7b18a195e578d3f2c3bbe0)
 
-Here are some useful links to get you started:
+:white_check_mark: 3.5 Aplikacja jest w stanie odbierać wiadomości użytkowników z
+platformy Discord skierowane do aplikacji (bota) [Link do commita](https://github.com/mario343/ebiznes/commit/2775e4b00c2f2a8a1c7b18a195e578d3f2c3bbe0)
 
-- [Ktor Documentation](https://ktor.io/docs/home.html)
-- [Ktor GitHub page](https://github.com/ktorio/ktor)
-- The [Ktor Slack chat](https://app.slack.com/client/T09229ZC6/C0A974TJ9). You'll need to [request an invite](https://surveys.jetbrains.com/s3/kotlin-slack-sign-up) to join.
+:x: 4.0 Zwróci listę kategorii na określone żądanie użytkownika
 
-## Features
+:x: 4.5 Zwróci listę produktów wg żądanej kategorii
 
-Here's a list of features included in this project:
+:x: 5.0 Aplikacja obsłuży dodatkowo jedną z platform: Slack, Messenger,
+Webex
 
-| Name                                                  | Description                                                          |
-| ----------------------------------------------------- | -------------------------------------------------------------------- |
-| [Routing](https://start.ktor.io/p/routing)            | Provides a structured routing DSL                                    |
-| [WebSockets](https://start.ktor.io/p/ktor-websockets) | Adds WebSocket protocol support for bidirectional client connections |
+Kod: 03-kotlin
 
-## Building & Running
+[DEMO](https://github.com/mario343/ebiznes/blob/main/demos/zadanie3.gif)
 
-To build or run the project, use one of the following tasks:
-
-| Task                          | Description                                                          |
-| ----------------------------- | -------------------------------------------------------------------- |
-| `./gradlew test`              | Run the tests                                                        |
-| `./gradlew build`             | Build everything                                                     |
-| `buildFatJar`                 | Build an executable JAR of the server with all dependencies included |
-| `buildImage`                  | Build the docker image to use with the fat JAR                       |
-| `publishImageToLocalRegistry` | Publish the docker image locally                                     |
-| `run`                         | Run the server                                                       |
-| `runDocker`                   | Run using the local docker image                                     |
-
-If the server starts successfully, you'll see the following output:
-
-```
-2024-12-04 14:32:45.584 [main] INFO  Application - Application started in 0.303 seconds.
-2024-12-04 14:32:45.682 [main] INFO  Application - Responding at http://0.0.0.0:8080
-```
+Aby uruchomić bota, potrzeba stworzyć własną aplikację poprzez Discord i umiescic jego dane uwierzytelniające w pliku credentials.json
