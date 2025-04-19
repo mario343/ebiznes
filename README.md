@@ -89,18 +89,49 @@ z aplikacji serwerowej. Aplikacja serwera w jednym z trzech języków:
 Kotlin, Scala, Go. Dane pomiędzy wszystkimi komponentami powinny być
 przesyłane za pomocą React hooks.
 
-:white_check_mark: 3.0 W ramach projektu należy stworzyć dwa komponenty: Produkty oraz Płatności; Płatności powinny wysyłać do aplikacji serwerowej dane, a w Produktach powinniśmy pobierać dane o produktach z aplikacji serwerowej; [Link do commita]()
+:white_check_mark: 3.0 W ramach projektu należy stworzyć dwa komponenty: Produkty oraz Płatności; Płatności powinny wysyłać do aplikacji serwerowej dane, a w Produktach powinniśmy pobierać dane o produktach z aplikacji serwerowej; [Link do commita](https://github.com/mario343/ebiznes/commit/e100fd0fb56833735e5ee3b149b1069a542cb50b)
 
-:white_check_mark: 3.5 Należy dodać Koszyk wraz z widokiem; należy wykorzystać routing [Link do commita]()
+:white_check_mark: 3.5 Należy dodać Koszyk wraz z widokiem; należy wykorzystać routing [Link do commita](https://github.com/mario343/ebiznes/commit/e100fd0fb56833735e5ee3b149b1069a542cb50b)
 
 :white_check_mark: 4.0 Dane pomiędzy wszystkimi komponentami powinny być przesyłane za
-pomocą React hooks
+pomocą React hooks [Link do commita](https://github.com/mario343/ebiznes/commit/e100fd0fb56833735e5ee3b149b1069a542cb50b)
 
 :x: 4.5 Należy dodać skrypt uruchamiający aplikację serwerową oraz
 kliencką na dockerze via docker-compose
 
 :x: 5.0 Należy wykorzystać axios’a oraz dodać nagłówki pod CORS
 
-Kod: 04-go
+Kod: 05-react-06-tests
 
 [DEMO](https://github.com/mario343/ebiznes/blob/main/demos/zadanie5.gif)
+
+**Zadanie 6** Testy - Cypress js
+
+Należy stworzyć 20 przypadków testowych w jednym z rozwiązań:
+
+- Cypress JS (JS)
+- Selenium (Kotlin, Python, Java, JS, Go, Scala)
+
+Testy mają w sumie zawierać minimum 50 asercji (3.5). Mają również
+uruchamiać się na platformie Browserstack (5.0). Proszę pamiętać o
+stworzeniu darmowego konta via https://education.github.com/pack
+
+:white_check_mark: 3.0 Należy stworzyć 20 przypadków testowych w CypressJS lub Selenium
+(Kotlin, Python, Java, JS, Go, Scala) [Link do commita]()
+
+:white_check_mark: 3.5 Należy rozszerzyć testy funkcjonalne, aby zawierały minimum 50
+asercji [Link do commita]()
+
+:x: 4.0 Należy stworzyć testy jednostkowe do wybranego wcześniejszego
+projektu z minimum 50 asercjami
+
+:x: 4.5 Należy dodać testy API, należy pokryć wszystkie endpointy z
+minimum jednym scenariuszem negatywnym per endpoint
+
+:x: 5.0 Należy uruchomić testy funkcjonalne na Browserstacku
+
+Kod: 05-react-06-tests
+To zadanie jest rozszerzeniem zadania 05.
+
+[DEMO](https://github.com/mario343/ebiznes/blob/main/demos/zadanie6.gif)
+[DEMO](https://github.com/mario343/ebiznes/blob/main/demos/zadanie6_cli.gif)
