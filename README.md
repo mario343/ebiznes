@@ -78,3 +78,29 @@ a produktem
 Kod: 04-go
 
 [DEMO](https://github.com/mario343/ebiznes/blob/main/demos/zadanie4.gif)
+
+**Zadanie 5** React
+
+Należy stworzyć aplikację kliencką wykorzystując bibliotekę React.js.
+W ramach projektu należy stworzyć trzy komponenty: Produkty, Koszyk
+oraz Płatności. Koszyk oraz Płatności powinny wysyłać do aplikacji
+serwerowej dane, a w Produktach powinniśmy pobierać dane o produktach
+z aplikacji serwerowej. Aplikacja serwera w jednym z trzech języków:
+Kotlin, Scala, Go. Dane pomiędzy wszystkimi komponentami powinny być
+przesyłane za pomocą React hooks.
+
+:white_check_mark: 3.0 W ramach projektu należy stworzyć dwa komponenty: Produkty oraz Płatności; Płatności powinny wysyłać do aplikacji serwerowej dane, a w Produktach powinniśmy pobierać dane o produktach z aplikacji serwerowej; [Link do commita]()
+
+:white_check_mark: 3.5 Należy dodać Koszyk wraz z widokiem; należy wykorzystać routing [Link do commita]()
+
+:white_check_mark: 4.0 Dane pomiędzy wszystkimi komponentami powinny być przesyłane za
+pomocą React hooks
+
+:x: 4.5 Należy dodać skrypt uruchamiający aplikację serwerową oraz
+kliencką na dockerze via docker-compose
+
+:x: 5.0 Należy wykorzystać axios’a oraz dodać nagłówki pod CORS
+
+Kod: 04-go
+
+[DEMO](https://github.com/mario343/ebiznes/blob/main/demos/zadanie5.gif)

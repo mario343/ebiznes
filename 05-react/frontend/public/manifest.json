@@ -1,0 +1,8 @@
+{
+  "short_name": "05-react",
+  "name": "05-react",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
