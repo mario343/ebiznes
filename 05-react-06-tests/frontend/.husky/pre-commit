@@ -1,2 +1,25 @@
-npm test
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+echo "🔍 Starting pre-commit checks..."
+
+echo "⚡ Running linting..."
 npx lint-staged
+if [ $? -eq 0 ]; then
+  echo "✅ Linting passed. All code is properly formatted."
+else
+  echo "❌ Linting failed. Please fix the issues before committing."
+  exit 1
+fi
+
+echo "⚡ Running tests..."
+npm test
+if [ $? -eq 0 ]; then
+  echo "✅ All tests passed!"
+else
+  echo "❌ Some tests failed. Please fix the issues before committing."
+  exit 1
+fi
+
+echo "🎉 All checks passed. You can safely commit your changes."
+
