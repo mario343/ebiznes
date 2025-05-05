@@ -42,6 +42,7 @@ function Payments() {
       setCvv("");
       setName("");
     } catch (error) {
+      console.error("Payment error:", error);
       setStatus("error");
       setMessage("Payment failed. Please try again.");
     }

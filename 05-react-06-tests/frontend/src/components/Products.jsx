@@ -1,8 +1,7 @@
 import React, { useEffect } from "react";
 import axios from "axios";
 import { useShop } from "../context/ShopContext";
-import { Button } from "@chakra-ui/react";
-import { Table } from "@chakra-ui/react";
+import { Button, Table } from "@chakra-ui/react";
 
 const Products = () => {
   const { products, setProducts, addToBasket } = useShop();

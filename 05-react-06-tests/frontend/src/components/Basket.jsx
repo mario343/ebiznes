@@ -9,9 +9,9 @@ import {
   EmptyState,
   VStack,
   List,
+  Separator,
 } from "@chakra-ui/react";
 import { LuShoppingCart } from "react-icons/lu";
-import { Separator } from "@chakra-ui/react";
 
 function Basket() {
   const { basket, removeFromBasket } = useShop();
@@ -50,8 +50,8 @@ function Basket() {
       ) : (
         <VStack spacing={4}>
           <List.Root as="ol">
-            {basket.map((p, i) => (
-              <List.Item key={i}>
+            {basket.map((p) => (
+              <List.Item key={p.id} as="li">
                 <Flex justify="space-between" align="center" w="100%">
                   <Box>
                     {p.name} - {p.price} zł

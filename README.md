@@ -135,3 +135,48 @@ To zadanie jest rozszerzeniem zadania 05.
 
 [DEMO](https://github.com/mario343/ebiznes/blob/main/demos/zadanie6.gif)
 [DEMO](https://github.com/mario343/ebiznes/blob/main/demos/zadanie6_cli.gif)
+
+Zadanie 7 - Sonar
+
+Należy dodać projekt aplikacji klienckiej oraz serwerowej (jeden
+branch, dwa repozytoria) do Sonara w wersji chmurowej
+(https://sonarcloud.io/). Należy poprawić aplikacje uzyskując 0 bugów,
+0 zapaszków, 0 podatności, 0 błędów bezpieczeństwa. Dodatkowo należy
+dodać widżety sonarowe do README w repozytorium dane projektu z
+wynikami.
+
+3.0
+3.5
+4.0
+4.5
+5.0
+
+:white_check_mark: 3.0 Należy dodać litera do odpowiedniego kodu aplikacji serwerowej w
+hookach gita [Link do commita]()
+
+:white_check_mark: 3.5 Należy wyeliminować wszystkie bugi w kodzie w Sonarze (kod
+aplikacji serwerowej) [Link do commita]()
+
+:white_check_mark: 4.0 Należy wyeliminować wszystkie zapaszki w kodzie w Sonarze (kod
+aplikacji serwerowej)
+
+:white_check_mark: 4.5 Należy wyeliminować wszystkie podatności oraz błędy bezpieczeństwa
+w kodzie w Sonarze (kod aplikacji serwerowej)
+
+:white_check_mark: 5.0 Należy wyeliminować wszystkie błędy oraz zapaszki w kodzie
+aplikacji klienckiej
+
+Kod: 07-sonar
+Cały kod (poprawiony przez Eslint, Ktlint, Sonar) jest dostępny w 05-react-06-tests, last commit tutaj
+
+FRONTEND
+
+BACKEND
+
+[![Quality gate](https://sonarcloud.io/api/project_badges/quality_gate?project=mario343_backend)](https://sonarcloud.io/summary/new_code?id=mario343_backend)
+
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=mario343_backend&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=mario343_backend)
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=mario343_backend&metric=bugs)](https://sonarcloud.io/summary/new_code?id=mario343_backend)
+[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=mario343_backend&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=mario343_backend)
+[![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=mario343_backend&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=mario343_backend)
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=mario343_backend&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=mario343_backend)
