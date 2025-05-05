@@ -1,6 +1,9 @@
 package com.example
 
-import org.jetbrains.exposed.sql.*
+import org.jetbrains.exposed.sql.Database
+import org.jetbrains.exposed.sql.SchemaUtils
+import org.jetbrains.exposed.sql.insert
+import org.jetbrains.exposed.sql.selectAll
 import org.jetbrains.exposed.sql.transactions.transaction
 
 object DatabaseFactory {
@@ -15,13 +18,14 @@ object DatabaseFactory {
     private fun seedData() {
         if (Products.selectAll().empty()) {
             println("Seeding initial product data...")
-            val initialProducts = listOf(
-                "Laptop" to 3000.0,
-                "Mouse" to 100.0,
-                "Screen" to 800.0,
-                "Keyboard" to 100.0,
-                "Accessory" to 50.0,
-            )
+            val initialProducts =
+                listOf(
+                    "Laptop" to 3000.0,
+                    "Mouse" to 100.0,
+                    "Screen" to 800.0,
+                    "Keyboard" to 100.0,
+                    "Accessory" to 50.0,
+                )
 
             initialProducts.forEach { (name, price) ->
                 Products.insert {

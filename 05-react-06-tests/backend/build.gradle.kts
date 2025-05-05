@@ -1,5 +1,5 @@
-import java.util.Properties
 import java.io.FileInputStream
+import java.util.Properties
 
 val localProperties = Properties()
 val localPropertiesFile = rootProject.file("local.properties")
@@ -9,11 +9,12 @@ if (localPropertiesFile.exists()) {
 
 val ktorVersion by extra("3.1.0")
 val exposedVersion by extra("0.61.0")
-val sqliteVersion by extra("3.45.1.0") 
+val sqliteVersion by extra("3.45.1.0")
 
 plugins {
     kotlin("jvm") version "2.1.20"
     kotlin("plugin.serialization") version "2.1.20"
+    id("org.jlleitschuh.gradle.ktlint") version "12.2.0"
     id("org.sonarqube") version "6.0.1.5171"
     application
 }
@@ -47,3 +48,14 @@ sonar {
         property("sonar.coverage.exclusions", "**/*")
     }
 }
+
+buildscript {
+    repositories {
+        maven("https://plugins.gradle.org/m2/")
+    }
+    dependencies {
+        classpath("org.jlleitschuh.gradle:ktlint-gradle:<current_version>")
+    }
+}
+
+apply(plugin = "org.jlleitschuh.gradle.ktlint")
