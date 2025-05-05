@@ -1,0 +1,21 @@
+#!/bin/sh
+
+# Git pre-commit hook to run ktlint inside 05-react directory (backend)
+
+echo "==> Running ktlint in 05-react-06-tests/backend..."
+
+# Move to the Kotlin backend directory
+cd 05-react-06-tests/backend || {
+  echo "❌ Could not change directory to 05-react-06-tests/backend. Aborting commit."
+  exit 1
+}
+
+./gradlew ktlintCheck
+
+RESULT=$?
+if [ $RESULT -ne 0 ]; then
+  echo "❌ ktlintCheck failed. Fix formatting issues before committing."
+  exit 1
+fi
+
+echo "✅ ktlintCheck passed. Proceeding with commit."
