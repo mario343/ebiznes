@@ -1,5 +1,5 @@
 {
-  "name": "sklep-app",
+  "name": "frontend",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -27,8 +27,7 @@
     "start": "NODE_OPTIONS=--openssl-legacy-provider react-scripts start",
     "build": "NODE_OPTIONS=--openssl-legacy-provider react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "prepare": "husky install"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
@@ -58,6 +57,7 @@
     "globals": "^16.0.0",
     "husky": "^8.0.3",
     "lint-staged": "^15.5.1",
+    "typescript": "^5.8.3",
     "typescript-eslint": "^8.31.1"
   },
   "lint-staged": {

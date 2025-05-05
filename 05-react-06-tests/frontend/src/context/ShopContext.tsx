@@ -4,6 +4,8 @@ import React, {
   useEffect,
   ReactNode,
   useMemo,
+  useContext,
+  useCallback,
 } from "react";
 
 interface Product {
@@ -25,7 +27,17 @@ interface ShopProviderProps {
   children: ReactNode;
 }
 
-const ShopContext = createContext<ShopContextType | undefined>(undefined);
+export const ShopContext = createContext<ShopContextType | undefined>(
+  undefined
+);
+
+export const useShop = () => {
+  const context = useContext(ShopContext);
+  if (context === undefined) {
+    throw new Error("useShop must be used within a ShopProvider");
+  }
+  return context;
+};
 
 export const ShopProvider = ({ children }: ShopProviderProps) => {
   const [products, setProducts] = useState<Product[]>([]);
@@ -38,16 +50,19 @@ export const ShopProvider = ({ children }: ShopProviderProps) => {
     localStorage.setItem("basket", JSON.stringify(basket));
   }, [basket]);
 
-  const addToBasket = (produkt: Product) => {
-    setBasket([...basket, produkt]);
-  };
+  const addToBasket = useCallback((product: Product) => {
+    setBasket((prevBasket) => [...prevBasket, product]);
+  }, []);
 
-  const removeFromBasket = (index: number) => {
-    setBasket((prevBasket) => prevBasket.filter((_, i) => i !== index));
-  };
+  const removeFromBasket = useCallback((index: number) => {
+    setBasket((prevBasket) => {
+      const newBasket = [...prevBasket];
+      newBasket.splice(index, 1);
+      return newBasket;
+    });
+  }, []);
 
   const clearBasket = () => setBasket([]);
-
   const value = useMemo(
     () => ({
       products,
@@ -57,7 +72,7 @@ export const ShopProvider = ({ children }: ShopProviderProps) => {
       clearBasket,
       removeFromBasket,
     }),
-    [products, basket]
+    [products, basket, addToBasket, removeFromBasket]
   );
 
   return <ShopContext.Provider value={value}>{children}</ShopContext.Provider>;

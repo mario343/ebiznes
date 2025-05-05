@@ -50,14 +50,14 @@ function Basket() {
       ) : (
         <VStack spacing={4}>
           <List.Root as="ol">
-            {basket.map((p) => (
-              <List.Item key={p.id} as="li">
+            {basket.map((p, index) => (
+              <List.Item key={`${p.id}-${index}`} as="li">
                 <Flex justify="space-between" align="center" w="100%">
                   <Box>
                     {p.name} - {p.price} zł
                   </Box>
                   <CloseButton
-                    onClick={() => removeFromBasket(i)}
+                    onClick={() => removeFromBasket(index)}
                     size="xs"
                     color={"red.500"}
                     _hover={{ bg: "red.700" }}
