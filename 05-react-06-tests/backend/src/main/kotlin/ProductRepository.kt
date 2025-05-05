@@ -1,6 +1,7 @@
 package com.example
 
 import org.jetbrains.exposed.sql.*
+import org.jetbrains.exposed.sql.selectAll
 import org.jetbrains.exposed.sql.transactions.transaction
 
 object ProductRepository {
@@ -11,7 +12,7 @@ object ProductRepository {
     }
 
     fun getById(id: Int): Product? = transaction {
-        Products.select { Products.id eq id }.mapNotNull {
+        Products.selectAll().where { Products.id eq id }.mapNotNull {
             Product(it[Products.id].value, it[Products.name], it[Products.price])
         }.singleOrNull()
     }
