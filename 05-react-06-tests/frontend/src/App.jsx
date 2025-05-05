@@ -2,14 +2,13 @@ import React from "react";
 import Products from "./components/Products";
 import Basket from "./components/Basket";
 import Payments from "./components/Payments";
-import { Flex, Link, Badge } from "@chakra-ui/react";
+import { Flex, Link } from "@chakra-ui/react";
 import { useShop } from "./context/ShopContext";
-import { useNavigate, useLocation, Routes, Route } from "react-router-dom";
+import { useNavigate, Routes, Route } from "react-router-dom";
 
 function App() {
   const { basket } = useShop();
   const navigate = useNavigate();
-  const location = useLocation();
 
   const sum = basket.reduce((s, p) => s + p.price, 0);
 
