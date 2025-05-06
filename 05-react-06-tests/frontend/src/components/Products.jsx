@@ -5,16 +5,10 @@ import { Button, Table } from "@chakra-ui/react";
 
 const Products = () => {
   const { products, setProducts, addToBasket } = useShop();
-
   useEffect(() => {
-    axios
-      .get("http://localhost:8080/products")
-      .then((response) => {
-        setProducts(response.data);
-      })
-      .catch((error) => {
-        console.error("Błąd podczas pobierania produktów:", error);
-      });
+    axios.get("http://localhost:8080/products").then((response) => {
+      setProducts(response.data);
+    });
   }, [setProducts]);
 
   return (
