@@ -145,30 +145,31 @@ branch, dwa repozytoria) do Sonara w wersji chmurowej
 dodać widżety sonarowe do README w repozytorium dane projektu z
 wynikami.
 
-<span style="color:red">_Uwaga: To zadanie również spełnia wszystkie założenia zadania 6 z Projektowania obietkowego_</span>.
+<span style="color:red">_*Uwaga: To zadanie również spełnia wszystkie założenia zadania 6 z Projektowania obietkowego*_</span>.
 
 :white_check_mark: 3.0 Należy dodać litera do odpowiedniego kodu aplikacji serwerowej w
 hookach gita. [Link do commita](https://github.com/mario343/ebiznes/commit/3cc44a3bdace0e4cdf0594c0506c08f1fe12fd51)
 
 :white_check_mark: 3.5 Należy wyeliminować wszystkie bugi w kodzie w Sonarze (kod
-aplikacji serwerowej) [Link do commita](https://github.com/mario343/ebiznes/commit/9f516f0535314d1bf365eccd31c3b147602f069b)
+aplikacji serwerowej) [Link do commita](https://github.com/mario343/ebiznes/commit/d2f2ee71a57857f69262341fd0449b3fc4184204)
 
 :white_check_mark: 4.0 Należy wyeliminować wszystkie zapaszki w kodzie w Sonarze (kod
-aplikacji serwerowej) [Link do commita](https://github.com/mario343/ebiznes/commit/9f516f0535314d1bf365eccd31c3b147602f069b)
+aplikacji serwerowej) [Link do commita](https://github.com/mario343/ebiznes/commit/d2f2ee71a57857f69262341fd0449b3fc4184204)
 
 :white_check_mark: 4.5 Należy wyeliminować wszystkie podatności oraz błędy bezpieczeństwa
-w kodzie w Sonarze (kod aplikacji serwerowej) [Link do commita](https://github.com/mario343/ebiznes/commit/9f516f0535314d1bf365eccd31c3b147602f069b)
+w kodzie w Sonarze (kod aplikacji serwerowej) [Link do commita](https://github.com/mario343/ebiznes/commit/d2f2ee71a57857f69262341fd0449b3fc4184204)
 
 :white_check_mark: 5.0 Należy wyeliminować wszystkie błędy oraz zapaszki w kodzie
-aplikacji klienckiej [Link do commita](https://github.com/mario343/ebiznes/commit/9f516f0535314d1bf365eccd31c3b147602f069b)
+aplikacji klienckiej [Link do commita](https://github.com/mario343/ebiznes/commit/d2f2ee71a57857f69262341fd0449b3fc4184204)
 
 Kod: 07-sonar - tutaj tylko pre-commit skrypt bashowy
-Cały kod (poprawiony przez Eslint, Ktlint, Sonar) jest dostępny w 05-react-06-tests, last commit tutaj [Link do commita](https://github.com/mario343/ebiznes/commit/3cc44a3bdace0e4cdf0594c0506c08f1fe12fd51)
+Cały kod (poprawiony przez Eslint, Ktlint, Sonar) jest dostępny w 05-react-06-tests, last commit tutaj [Link do commita](https://github.com/mario343/ebiznes/commit/d2f2ee71a57857f69262341fd0449b3fc4184204)
 
 FRONTEND
 
 [![Quality gate](https://sonarcloud.io/api/project_badges/quality_gate?project=mario343_frontend)](https://sonarcloud.io/summary/new_code?id=mario343_frontend)
 
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=mario343_frontend&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=mario343_frontend)
 [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=mario343_frontend&metric=bugs)](https://sonarcloud.io/summary/new_code?id=mario343_frontend)
 [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=mario343_frontend&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=mario343_frontend)
 [![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=mario343_frontend&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=mario343_frontend)
