@@ -23,15 +23,15 @@ function Login({ onLoginSuccess }) {
         const token = response.data.token;
         onLoginSuccess(token);
         toaster.success({
-          title: "Login successful",
-          description: `Welcome, ${username}!`,
+          title: "Zalogowano",
+          description: `Witaj, ${username}!`,
         });
       } else {
         const errorMessage =
-          response.data?.error || "Invalid username or password";
+          response.data?.error || "Nieprawidłowe dane logowania";
         setError(errorMessage);
         toaster.error({
-          title: "Login failed",
+          title: "Nie udało się zalogować",
           description: errorMessage,
         });
       }
@@ -39,7 +39,7 @@ function Login({ onLoginSuccess }) {
       const errorMessage =
         error.response?.data?.error ||
         error.message ||
-        "Login failed. Please try again.";
+        "Nie udało się zalogować. Spróbuj ponownie później.";
       setError(errorMessage);
       toaster.error({
         title: "Error",
