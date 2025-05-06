@@ -186,3 +186,31 @@ BACKEND
 [![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=mario343_backend&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=mario343_backend)
 
 [DEMO](https://github.com/mario343/ebiznes/blob/main/demos/zadanie7.gif)
+
+**Zadanie 8** Oauth2
+
+Należy skonfigurować klienta Oauth2 (4.0). Dane o użytkowniku wraz z
+tokenem powinny być przechowywane po stronie bazy serwera, a nowy
+token (inny niż ten od dostawcy) powinien zostać wysłany do klienta
+(React). Można zastosować mechanizm sesji lub inny dowolny (5.0).
+Zabronione jest tworzenie klientów bezpośrednio po stronie React'a
+wyłączając z komunikacji aplikację serwerową, np. wykorzystując auth0.
+
+Prawidłowa komunikacja: react-sewer-dostawca-serwer(via return
+uri)-react.
+
+:white_check_mark: 3.0 logowanie przez aplikację serwerową (bez Oauth2) [Link do commita](https://github.com/mario343/ebiznes/commit/d1e6ce5ac6dc54dbf4aa1444c292b2cd43a1f9fc)
+
+:white_check_mark: 3.5 rejestracja przez aplikację serwerową (bez Oauth2) [Link do commita](https://github.com/mario343/ebiznes/commit/181118c2698b67ac3ef49362f697ffd7b1b2dc22)
+
+[latest commit](https://github.com/mario343/ebiznes/commit/00ff568e32fedf5dafc7a8199b9128033e8d398e)
+
+:x: 4.0 logowanie via Google OAuth2
+
+:x: 4.5 logowanie via Facebook lub Github OAuth2
+
+:x: 5.0 zapisywanie danych logowania OAuth2 po stronie serwera
+
+Kod: 08-auth
+
+[DEMO](https://github.com/mario343/ebiznes/blob/main/demos/zadanie8.gif)
