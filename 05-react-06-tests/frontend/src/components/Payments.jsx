@@ -42,8 +42,25 @@ function Payments() {
       setCvv("");
       setName("");
     } catch (error) {
+      let errorMessage = "Payment failed. Please try again.";
+
+      if (axios.isAxiosError(error)) {
+        if (error.response) {
+          errorMessage = `Payment failed: ${
+            error.response.data.message || error.response.statusText
+          }`;
+        } else if (error.request) {
+          errorMessage =
+            "No response from payment server. Please check your connection.";
+        } else {
+          errorMessage = "Payment request setup failed: " + error.message;
+        }
+      } else if (error instanceof Error) {
+        errorMessage = "Payment failed: " + error.message;
+      }
+
       setStatus("error");
-      setMessage("Payment failed. Please try again.");
+      setMessage(errorMessage);
     }
   };
 
