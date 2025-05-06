@@ -26,11 +26,17 @@ object JWTConfig {
         .withIssuer(issuer)
         .withAudience(audience)
         .withClaim("username", username)
-        .withExpiresAt(Date(System.currentTimeMillis() + validityInMs))
+        .withExpiresAt(Date(System.currentTimeMillis() + validityInMs)) 
         .sign(algorithm)
 
     fun validate(credential: JWTCredential): JWTPrincipal? {
         val username = credential.payload.getClaim("username").asString()
-        return if (username != null) JWTPrincipal(credential.payload) else null
+        val expiration = credential.payload.expiresAt
+
+        if (username != null && expiration != null && expiration.after(Date())) {
+            return JWTPrincipal(credential.payload)
+        }
+
+        return null 
     }
 }
