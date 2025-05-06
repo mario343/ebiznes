@@ -145,12 +145,6 @@ branch, dwa repozytoria) do Sonara w wersji chmurowej
 dodać widżety sonarowe do README w repozytorium dane projektu z
 wynikami.
 
-3.0
-3.5
-4.0
-4.5
-5.0
-
 :white_check_mark: 3.0 Należy dodać litera do odpowiedniego kodu aplikacji serwerowej w
 hookach gita [Link do commita]()
 
