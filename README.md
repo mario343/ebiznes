@@ -224,11 +224,11 @@ do GPT, a następnie prześle odpowiedź do użytkownika. Cały projekt
 należy stworzyć w Pythonie.
 
 :white_check_mark: 3.0 należy stworzyć po stronie serwerowej osobny serwis do łącznia z
-chatGPT do usługi chat [Link do commita]()
+chatGPT do usługi chat [Link do commita](https://github.com/mario343/ebiznes/commit/330b573900c2e508601d2508d0633c9b49440dd3)
 
 :white_check_mark: 3.5 należy stworzyć interfejs frontowy dla użytkownika, który
 komunikuje się z serwisem; odpowiedzi powinny być wysyałen do
-frontendowego interfejsu [Link do commita]()
+frontendowego interfejsu [Link do commita](https://github.com/mario343/ebiznes/commit/330b573900c2e508601d2508d0633c9b49440dd3)
 
 :x: 4.0 stworzyć listę 5 różnych otwarć oraz zamknięć rozmowy
 
