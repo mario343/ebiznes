@@ -240,3 +240,33 @@ ograniczenie się jedynie do ubrań oraz samego sklepu) do GPT
 Kod: 09-llm
 
 [DEMO](https://github.com/mario343/ebiznes/blob/main/demos/zadanie9.gif)
+
+**Zadanie 10** Cloud/CI
+
+Należy wykorzystać GitHub Actions (dopuszczalne są inne rozwiązania
+CI) oraz chmurę Azure (dopuszczalne inne chmury), aby zbudować oraz
+zdeployować aplikację kliencką (frontend) oraz serwerową (backend)
+jako osobne dwie aplikacje. Należy do tego wykorzystać obrazy
+dockerowe, a aplikacje powinny działać na kontenerach. Dopuszczalne
+jest zbudowanie wcześniej aplikacji (jar package) oraz budowanie
+aplikacji via Github Actions. Należy zwrócić uwagę na zasoby dostępne
+na chmurze.
+
+:white_check_mark: 3.0 Należy stworzyć odpowiednie instancje po stronie chmury na
+dockerze [Link do commita](https://github.com/mario343/ebiznes/commit/5cd97db657c40b59326bf6b46a40a8da44af5e84)
+W demo została przedstawiona instancja VM na Azure
+
+:x: 3.5 Stworzyć odpowiedni pipeline w Github Actions do budowania
+aplikacji (np. via fatjar) [Link do commita]()
+
+:x: 4.0 Dodać notyfikację mailową o zbudowaniu aplikacji
+
+:x: 4.5 Dodać krok z deploymentem aplikacji serwerowej oraz klienckiej na
+chmurę
+
+:x: 5.0 Dodać uruchomienie regresyjnych testów automatycznych
+(funkcjonalnych) jako krok w Actions
+
+Kod: 10-cloud-ci
+
+[DEMO](https://github.com/mario343/ebiznes/blob/main/demos/zadanie10.gif)
