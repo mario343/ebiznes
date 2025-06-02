@@ -269,4 +269,7 @@ chmurę
 
 Kod: 10-cloud-ci
 
+Obecnie aplikacja działa [tutaj](http://20.169.88.136:3000/)
+Będzie działać do końca tygodnia, czyli 08.06.2025 (albo w momencie otrzymania oceny za nie, zależnie co wystąpi wcześniej).
+
 [DEMO](https://github.com/mario343/ebiznes/blob/main/demos/zadanie10.gif)
